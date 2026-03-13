@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — SmoothRates LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg-primary: #0a0a0a;
+      --bg-secondary: #111111;
+      --bg-card: #161616;
+      --text-primary: #f5f5f7;
+      --text-secondary: #a1a1a6;
+      --text-tertiary: #6e6e73;
+      --accent: #2997ff;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(255, 255, 255, 0.15);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 0 48px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-weight: 600;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--text-tertiary); font-weight: 400; }
+
+    .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 400;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-back:hover { opacity: 0.7; }
+
+    /* ── CONTENT ── */
+    .legal-page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 140px 24px 100px;
+    }
+
+    .legal-page .page-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .legal-page h1 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+
+    .legal-page .effective-date {
+      font-size: 0.9rem;
+      color: var(--text-tertiary);
+      margin-bottom: 48px;
+    }
+
+    .legal-page .intro {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 48px;
+      font-weight: 300;
+    }
+
+    .legal-section {
+      margin-bottom: 40px;
+    }
+
+    .legal-section h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+
+    .legal-section h3 {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+
+    .legal-section p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      font-weight: 300;
+      margin-bottom: 12px;
+    }
+
+    .legal-section ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 12px;
+    }
+
+    .legal-section ul li {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      font-weight: 300;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .legal-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--text-tertiary);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 40px 48px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 100%;
+    }
+
+    .footer-left {
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+      font-weight: 300;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .footer-links a {
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover { color: var(--text-secondary); }
+
+    .footer-email {
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+    }
+
+    .footer-email a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-email a:hover { color: var(--accent); }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 24px; }
+      .legal-page { padding: 120px 20px 80px; }
+      footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 32px 24px;
+      }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">SmoothRates <span>LLC</span></a>
+    <a href="index.html" class="nav-back">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to Home
+    </a>
+  </nav>
+
+  <main class="legal-page">
+    <div class="page-label">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="effective-date">Effective Date: February 17, 2026</p>
+    <p class="intro">SMOOTHRATES LLC ("Company", "we", "our", or "us") operates the ChessMate mobile application and related services (the "Service"). This Privacy Policy explains how we collect, use, and protect your information when you use ChessMate.</p>
+
+    <div class="legal-section">
+      <h2>1. Information We Collect</h2>
+      <h3>Account Information</h3>
+      <ul>
+        <li>Name or display name</li>
+        <li>Email address</li>
+        <li>Authentication identifiers from Apple Sign-In or Google Sign-In</li>
+        <li>Profile photo (if provided)</li>
+      </ul>
+      <h3>User Content</h3>
+      <ul>
+        <li>Posts, comments, chess games, and messages</li>
+        <li>Photos or images you upload</li>
+        <li>Profile information and bios</li>
+      </ul>
+      <h3>Usage &amp; Technical Data</h3>
+      <ul>
+        <li>Device type and OS version</li>
+        <li>App performance and crash logs</li>
+        <li>Security and fraud prevention signals (including App Check)</li>
+      </ul>
+      <h3>Location Data</h3>
+      <p>If you enable location features, ChessMate may use approximate or precise location to help show nearby chess spots or events.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>2. How We Use Information</h2>
+      <p>We use information to:</p>
+      <ul>
+        <li>Provide and operate the Service</li>
+        <li>Authenticate users and secure accounts</li>
+        <li>Store and display user content</li>
+        <li>Improve performance and reliability</li>
+        <li>Prevent fraud, abuse, and unauthorized access</li>
+        <li>Respond to support requests</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2>3. How We Share Information</h2>
+      <p>We do not sell personal data.</p>
+      <p>We may share data with service providers including:</p>
+      <ul>
+        <li>Google Firebase (authentication, database, storage, hosting, App Check)</li>
+        <li>Apple Sign-In and Google Sign-In authentication services</li>
+      </ul>
+      <p>These providers process data only to operate the Service.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>4. Data Storage and Security</h2>
+      <p>We use industry-standard security measures including:</p>
+      <ul>
+        <li>Secure authentication systems</li>
+        <li>Encrypted data transmission</li>
+        <li>Access controls and monitoring</li>
+      </ul>
+      <p>No system is 100% secure, but we work to protect user data.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>5. User Content Visibility</h2>
+      <p>Content you post may be visible to other users depending on app features and privacy settings.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>6. Data Retention</h2>
+      <p>We keep data while your account is active or as needed to operate the Service and comply with legal obligations.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>7. Your Rights</h2>
+      <p>You may:</p>
+      <ul>
+        <li>Request account deletion</li>
+        <li>Request removal of your data</li>
+        <li>Contact support for privacy questions</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2>8. Children's Privacy</h2>
+      <p>ChessMate is not intended for children under 13. We do not knowingly collect data from children.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>9. Third-Party Services</h2>
+      <p>ChessMate may link to third-party services. We are not responsible for their privacy practices.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>10. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy. Updates will be posted with a new effective date.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>11. Advertising and Tracking</h2>
+      <p>ChessMate may use third party advertising and analytics tools, including Meta, to measure ad performance and show relevant ads.</p>
+      <p>With your permission through Apple's App Tracking Transparency framework, we may allow these partners to collect device identifiers and app activity for advertising measurement and optimization.</p>
+      <p>You can change your tracking permission at any time in your device settings.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>12. Contact</h2>
+      <p>SMOOTHRATES LLC<br>Email: <a href="mailto:blake@smoothrates.com" style="color: var(--accent); text-decoration: none;">blake@smoothrates.com</a></p>
+      <p>By using ChessMate, you agree to this Privacy Policy.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-left">© 2026 SmoothRates LLC. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <div class="footer-email"><a href="mailto:blake@smoothrates.com">blake@smoothrates.com</a></div>
+  </footer>
+
+</body>
+</html>
